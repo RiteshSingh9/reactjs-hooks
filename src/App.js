@@ -1,3 +1,4 @@
+import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
 import Counter from "./components/useState/Counter";
@@ -9,6 +10,13 @@ import MouseContainer from "./components/useEffect/MouseContainer";
 import HookCounterTwo from "./components/useEffect/HookCounterTwo";
 import FetchAllData from "./components/fetchingData/FetcAllData";
 import FetchData from "./components/fetchingData/FetchData";
+import ComponentC from "./components/useContext/ComponentC";
+
+// older way
+export const UserContext = React.createContext();
+export const ChannelContext = React.createContext();
+
+// using hooks
 
 function App() {
     return (
@@ -23,7 +31,14 @@ function App() {
 
             {/* Fetching data  */}
             {/* <FetchAllData /> */}
-            <FetchData />
+            {/* <FetchData /> */}
+
+            {/* useContext */}
+            <UserContext.Provider value={"Ritesh"}>
+                <ChannelContext.Provider value={"codeevo"}>
+                    <ComponentC />
+                </ChannelContext.Provider>
+            </UserContext.Provider>
         </div>
     );
 }
