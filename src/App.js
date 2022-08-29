@@ -11,6 +11,9 @@ import HookCounterTwo from "./components/useEffect/HookCounterTwo";
 import FetchAllData from "./components/fetchingData/FetcAllData";
 import FetchData from "./components/fetchingData/FetchData";
 import ComponentC from "./components/useContext/ComponentC";
+import CounterOne from "./components/useReducer/CounterOne";
+import CounterTwo from "./components/useReducer/CounterTwo";
+import CounterThree from "./components/useReducer/CounterThree";
 
 // older way
 export const UserContext = React.createContext();
@@ -28,17 +31,19 @@ function App() {
             {/* <HookMouse /> */}
             {/* <MouseContainer /> */}
             {/* <HookCounterTwo /> */}
-
             {/* Fetching data  */}
             {/* <FetchAllData /> */}
             {/* <FetchData /> */}
-
             {/* useContext */}
-            <UserContext.Provider value={"Ritesh"}>
+            {/* <UserContext.Provider value={"Ritesh"}>
                 <ChannelContext.Provider value={"codeevo"}>
                     <ComponentC />
                 </ChannelContext.Provider>
-            </UserContext.Provider>
+            </UserContext.Provider> */}
+            {/* useReducer */}
+            {/* <CounterOne /> /*} {/* Simple state & actions */}
+            {/* <CounterTwo /> */} {/*} Complex state & actions */}
+            <CounterThree />
         </div>
     );
 }
